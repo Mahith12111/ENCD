@@ -20,8 +20,7 @@ from bot import (
 from bot.helper_funcs.ffmpeg import (
   convert_video,
   media_info,
-  take_screen_shot,
-  out_put_file_name
+  take_screen_shot
 )
 from bot.helper_funcs.display_progress import (
   progress_for_pyrogram,
@@ -38,7 +37,6 @@ from pyrogram.errors.exceptions.bad_request_400 import UserNotParticipant, Usern
 #  delete_downloads
 #)
 os.system("wget https://te.legra.ph/file/ed0102d22b0b94cb89cda.jpg -O thumb.jpg")
-
 LOGZ = -1001283278354
 CURRENT_PROCESSES = {}
 CHAT_FLOOD = {}
@@ -278,8 +276,9 @@ async def incoming_compress_message_f(update):
     #  pass
    # return
   
-  f os.path.exists(saved_file_path):
+  if os.path.exists(saved_file_path):
     downloaded_time = TimeFormatter((time.time() - d_start)*1000)
+    out_put_file_name = await convert_video(saved_file_path)
     duration, bitrate = await media_info(saved_file_path)
     if duration is None or bitrate is None:
       try:
