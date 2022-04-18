@@ -278,7 +278,6 @@ async def incoming_compress_message_f(update):
   
   if os.path.exists(saved_file_path):
     downloaded_time = TimeFormatter((time.time() - d_start)*1000)
-    out_put_file_name = await convert_video(saved_file_path)
     duration, bitrate = await media_info(saved_file_path)
     if duration is None or bitrate is None:
       try:
