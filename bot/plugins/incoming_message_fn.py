@@ -230,7 +230,7 @@ async def incoming_compress_message_f(update):
       saved_file_path = video
       eni = saved_file_path.split("/")[-1]
       xnx = eni.split(".")[-1]
-      file_name_op = kk.replace(f".{xnx}", " [@FIERCENETWORK].mkv")
+      file_name_op = eni.replace(f".{xnx}", " [@FIERCENETWORK].mkv")
       LOGGER.info(saved_file_path)  
       LOGGER.info(video)
       if( video is None ):
