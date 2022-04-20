@@ -221,6 +221,9 @@ async def incoming_compress_message_f(update):
         )
       )
       saved_file_path = video
+      eni = saved_file_path.split("/")[-1]
+      xnx = eni.split(".")[-1]
+      file_name_op = kk.replace(f".{xnx}", " [@FIERCENETWORK].mkv")
       LOGGER.info(saved_file_path)  
       LOGGER.info(video)
       if( video is None ):
@@ -343,7 +346,7 @@ async def incoming_compress_message_f(update):
       upload = await bot.send_video(
         chat_id=update.chat.id,
         video=o,
-        caption=out_put_file_name,
+        caption=file_name_op,
         supports_streaming=True,
         duration=duration,
         thumb=thumb_image_path,
