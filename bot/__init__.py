@@ -43,6 +43,7 @@ BOT_USERNAME = Config.BOT_USERNAME
 UPDATES_CHANNEL = "botlogas"
 data = []
 crf = []
+logz = []
 watermark = []
 resolution = []
 bit = []
