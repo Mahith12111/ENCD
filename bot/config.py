@@ -5,6 +5,7 @@ class Config(object):
     # AHCompressBot....
     # sucks Dude
     APP_ID = int(get_config("APP_ID", 12345))
+    FFMPEG = get_config("FFMPEG", '')
     API_HASH = get_config("API_HASH", "")
     LOG_CHANNEL = get_config("LOG_CHANNEL")
     UPDATES_CHANNEL = get_config("UPDATES_CHANNEL", None) # Without `@` LOL
