@@ -2,12 +2,12 @@ from bot.get_cfg import get_config
 class Config(object):
     # You can keep this default
     SESSION_NAME = get_config("SESSION_NAME", "AHCompressorBot")
-    # AHCompressBot....
+    # ASICompressBot....
     # sucks Dude
     APP_ID = int(get_config("APP_ID", 5235547))
     API_HASH = get_config("API_HASH", "69ff912f0d3150af610c1542031617ef")
-    LOG_CHANNEL = get_config("LOG_CHANNEL")
-    UPDATES_CHANNEL = get_config("UPDATES_CHANNEL", ASIMirrorUpdatess) # Without `@` LOL
+    LOG_CHANNEL = get_config("LOG_CHANNEL", "-100704206291")
+    UPDATES_CHANNEL = get_config("UPDATES_CHANNEL", ASIENCDUPDATES) # Without `@` LOL
      # Get these values from my.telegram.org
     AUTH_USERS = set(
         int(x) for x in get_config(
